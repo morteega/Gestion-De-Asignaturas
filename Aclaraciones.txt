@@ -3,4 +3,5 @@ o añadir descricpciones a una tarea, asignatura o algo se hace a partir de los 
 pero esas funciones estan implementadas tanto dentro de los modelos como los respositorios
 
 
-Me falta trabajar con las interfaces, una interfaz por cada objeto y controladores
+Controladores: SubjectController contendra a todos los demas controladores asi como 
+
