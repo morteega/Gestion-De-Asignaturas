@@ -7,3 +7,8 @@ Controladores: SubjectController contendra a todos los demas controladores asi c
 a Subject
 
 Saber muy bien que cosas puedo hacer en cada objeto (Examen, Tarea, Profesor...)
+
+Casos de uso en esta aplicacion son sobre todo poder editar los estados de cada uno
+de los atributos de cada objeto.
+Faltan bastantes atributos de cada objeto, por ejemplo ahora he añadido el ExamState y dificultad al examen;
+tengo que aclararme con que todos los atributos esten definidos

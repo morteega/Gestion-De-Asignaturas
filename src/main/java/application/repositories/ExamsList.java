@@ -1,5 +1,6 @@
 package application.repositories;
 
+
 import application.models.*;
 import java.util.ArrayList;
 
@@ -17,6 +18,9 @@ public class ExamsList {
     }
     public void setExamsList(ArrayList<Exam> examsList) {
         this.examsList = examsList;
+    }
+    public void editExamDescription(int id, String newDescription) {
+        this.examsList.get(id).setDescription(newDescription);
     }
 }
 

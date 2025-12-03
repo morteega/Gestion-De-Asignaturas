@@ -1,10 +1,14 @@
 package application.models;
+import java.util.Scanner;
 
 import java.time.LocalDate;
 
 public class Exam {
+    public static final Scanner SCANNER = new Scanner(System.in);
     private String description;
     private LocalDate date;
+    private Difficulty difficulty;
+    private ExamState examState;
 
     public Exam(String description, LocalDate date) {
         this.description = description;
