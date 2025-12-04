@@ -10,9 +10,11 @@ public class Exam {
     private Difficulty difficulty;
     private ExamState examState;
 
-    public Exam(String description, LocalDate date) {
+    public Exam(String description, LocalDate date, Difficulty difficulty, ExamState examState){ 
         this.description = description;
         this.date = date;
+        this.difficulty = difficulty;
+        this.examState = examState;
     }
     public String getDescription() {
         return description;
@@ -26,6 +28,17 @@ public class Exam {
     public void setDescription(String description){
         this.description=description;
     }
-    
+    public void setDifficulty(Difficulty difficulty){
+        this.difficulty=difficulty;
+    }
+    public Difficulty getDifficulty(){
+        return this.difficulty;
+    }
+    public void setExamState(ExamState examState){
+        this.examState=examState;
+    }
+    public ExamState getExamState(){
+        return this.examState;
+    }
 }
 

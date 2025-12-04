@@ -1,5 +1,6 @@
 package application.models;
 import application.repositories.AssignmentsList;
+import java.time.LocalDate;
 
 public class Proyect {
     private String name;
@@ -7,12 +8,14 @@ public class Proyect {
     private State state;
     private String description;
     private AssignmentsList assignmentsList;
+    private LocalDate dueDate;
 
-    public Proyect(String name, Difficulty difficulty, State state, String description) {
+    public Proyect(String name, Difficulty difficulty, State state, String description,LocalDate dueDate) {
         this.name = name;
         this.difficulty = difficulty;
         this.state = state;
         this.description = description;
+        this.dueDate = dueDate;
         this.assignmentsList = new AssignmentsList();
     }
     public String getName() {
@@ -30,6 +33,9 @@ public class Proyect {
     public AssignmentsList getAssignmentsList() {
         return assignmentsList;
     }
+    public LocalDate getDueDate(){
+        return this.dueDate;
+    }
     public void setName(String name) {
         this.name = name;
     }
@@ -44,6 +50,9 @@ public class Proyect {
     }
     public void setAssignmentsList(AssignmentsList assignmentsList) {
         this.assignmentsList = assignmentsList;
+    }
+    public void setDueDate(LocalDate dueDate){
+        this.dueDate=dueDate;
     }
     
 }
