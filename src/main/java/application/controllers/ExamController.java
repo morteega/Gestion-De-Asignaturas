@@ -37,17 +37,11 @@ public class ExamController {
         ExamState examState = getExamStateFromOption();
         this.examList.addExam(new Exam(description, date, difficulty, examState));
     }
-    public void editExamDate(){
-        System.out.print("Enter the exam ID to edit: ");
-        int id = SCANNER.nextInt();
-        SCANNER.nextLine(); // Consume newline
-        LocalDate newDate = getDateFromInput();
-        
+    public void editExamDate(){ //Pido el id del examen y la nueva fecha, pero el id se mete en el metodo de ExamList
+        int id=getExamIdFromInput();
+        LocalDate newDate=getDateFromInput();
+        examList.editExamDate(id, newDate);
     }
-    public void hola(){
-        System.out.println("hola");
-    }
-
 
     private String getDescriptionFromInput(){
         System.out.print("Enter exam description: \n");
@@ -107,6 +101,18 @@ public class ExamController {
                 break;
         }
         return difficulty;
+    }
+    private int getExamIdFromInput(){
+        System.out.print("Enter exam ID: \n");
+        int id=0;
+        do{
+            id= SCANNER.nextInt();
+            SCANNER.nextLine();
+            if(id<0||id>=examList.getExamsList().size()){
+                System.out.print("Invalid ID. Please enter a valid exam ID: \n");
+            }
+        }while(id<0||id>=examList.getExamsList().size());
+        return id;
     }
 }
 
